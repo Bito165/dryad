@@ -1,0 +1,9 @@
+{
+    "/_/*": {
+      "target": "https://test.db.demo.dryad.net/_",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true,
+      "pathRewrite": { "^/_": "" }
+    }
+}

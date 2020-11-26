@@ -1,0 +1,25 @@
+<form [formGroup]="loginForm">
+
+    
+    <h5>Enter Email</h5>
+    <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input type="text" pInputText formControlName="email" id="email" placeholder="Enter Email"/> <br>
+        <label *ngIf="loginForm.controls['email'] && loginForm.controls['email'].invalid && loginForm.controls['email'].dirty" for="email" class="text-danger"> Please Enter A Valid Email </label>
+    </span>
+
+    <br> <br>
+
+
+    <h5>Enter Password</h5>
+    <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input type="password" pInputText formControlName="password" id="password" placeholder="Enter Password"/> <br>
+        <label *ngIf="loginForm.controls['password'] && loginForm.controls['password'].invalid && loginForm.controls['password'].dirty" for="password" class="text-danger"> Please Enter A Password </label>
+    </span>
+
+    <br> <br>
+
+    <button pButton type="button" label="Submit" (click)="login()" class="p-button-text"></button>
+
+</form>
